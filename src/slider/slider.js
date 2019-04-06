@@ -6,19 +6,24 @@ export default class extends React.Component {
     this.index = 1
   }
   componentDidMount () {
-    this.time = setTimeout(this.loop.bind(this), 2000);
-    this.refs.dd.addEventListener('transitionend', () => {
-      this.time = setTimeout(this.loop.bind(this), 2000);
+    this.refs.childerns.style.width = this.props.width + 'px'
+    this.refs.childerns.style.height = this.props.height + 'px'
+    this.time = setTimeout(this.loop.bind(this), this.props.intervalTime);
+    this.refs.childerns.addEventListener('transitionend', () => {
+      this.time = setTimeout(this.loop.bind(this), this.props.intervalTime);
     })
+    if (this.index > 4) {
+      this.index = 1;
+    }
 
   }
   loop () {
-    this.refs.dd.style.transform = 'rotateX(' + (- this.index * 90) + 'deg)';
-    this.refs.dd.style.transition = '2s';
+    this.refs.childerns.style.transform = 'rotateX(' + (- this.index * this.props.deg) + 'deg)';
+    this.refs.childerns.style.transition = this.props.transitionTime;
     this.index++;
   }
   render () {
-    return <div className='a' ref='dd'>
+    return <div className='childern' ref='childerns' onMouseover={() => { clearTimeout(this.time); this.time = setTimeout(this.loop.bind(this), 0); }}>
       {this.props.children}
     </div>
   }

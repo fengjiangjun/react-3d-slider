@@ -1,27 +1,26 @@
-.a{
+.childern{
   position: relative;
   transform-style: preserve-3d;
   margin-left:200px;
   margin-top:300px;
-  height:300px;
+ 
   
 }
-.b{
+.imgs{
   position: absolute;
-  width: 600px;
-  height: 300px;
+  
   
   
 }
-.b:nth-child(1){
+ .imgs:nth-child(1){
   transform: translateZ(150px);
 }
-.b:nth-child(2){
+.imgs:nth-child(2){
   transform: translateY(-150px)  rotateX(90deg);
 }
-.b:nth-child(3){
+.imgs:nth-child(3){
   transform: translateZ(-150px) rotateX(180deg);
 }
-.b:nth-child(4){
+.imgs:nth-child(4){
   transform: translateY(150px)  rotateX(270deg);
 }
