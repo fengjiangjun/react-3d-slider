@@ -1,0 +1,11 @@
+.test-3d{
+  width: 600px;
+  height: 300px;
+  transform: translate(-50%,-50%);
+  position: absolute;
+  left:50%;
+  top:50%;
+}
+body{
+  background-color: darkseagreen;
+}

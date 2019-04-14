@@ -1,12 +1,13 @@
 {
-  "name": "react-button-fjj",
-  "version": "1.0.7",
+  "name": "react-slider3d-fjj",
+  "version": "0.0.1",
   "description": "",
-  "main": "./dist/index/index.js",
+  "main": "./dist/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack-dev-server --mode=development",
-    "build": "webpack"
+    "demo": "webpack --config ./webpack.config.js --progress --colors",
+    "build": "babel src -d dist --copy-files "
   },
   "author": "",
   "license": "ISC",
