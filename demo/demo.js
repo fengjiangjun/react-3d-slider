@@ -1,6 +1,6 @@
 import React from 'react';
 import { render } from 'react-dom';
-import Slider from '../src/index.js/index.js';
+import Slider from '../src/index.js';
 import './demo.css';
 const imgList = [
   {
