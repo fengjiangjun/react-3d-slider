@@ -1,0 +1,15 @@
+.container{
+  position: relative;
+  transform-style: preserve-3d;
+}
+.img-item{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.img-item:nth-child(2){
+  transform: translateY(-50%)  rotateX(90deg);
+}
+.img-item:nth-child(4){
+  transform: translateY(50%)  rotateX(270deg);
+}
