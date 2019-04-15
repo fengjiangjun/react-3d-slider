@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack-dev-server --mode=development",
-    "build": "babel slider -d dist --copy-files"
+    "demo": "webpack --config ./webpack.config.js --progress --colors",
+    "build": "babel src -d dist --copy-files "
   },
   "author": "",
   "license": "ISC",
